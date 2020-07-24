@@ -1,0 +1,11 @@
+<div *ngFor="let d of (data | filter: searchField); let last = last">
+  <div class="tweetComponentDiv">
+    <div class="firstDiv">
+      <span>{{d.name}} (@{{(d.screen_name)}})</span>
+    </div>
+    <div class="secondDiv" [ngClass]="last ? 'lastDiv' : ''">
+      <span>{{d.text}}</span>
+    </div>
+  </div>
+  <hr *ngIf="!last" style="margin: 40px -17px;">
+</div>

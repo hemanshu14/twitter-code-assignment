@@ -1,0 +1,29 @@
+<div class="full-height">
+  <div class="menu-container">
+    <div class="parent">
+      <span class="heading">Tweet Filters</span>
+      <input class="searchInput" (keydown)="searchText($event)" type="search" placeholder="@nameHandel or name"/>
+    </div>
+    <div class="parent">
+      <span class="heading">Show Only</span>
+      <div class="radioDiv">
+        <div>
+          <input id="atweets" value="atweets" name="tweets" type="radio" checked="checked" (change)="handleChange($event)"/>
+          <label style="margin-left: 12px" for="atweets">All Tweets</label>
+        </div>
+        <div>
+          <input id="rtweets" value="rtweets" name="tweets" type="radio" (change)="handleChange($event)"/>
+          <label for="rtweets" style="margin-left: 12px">Retweeted tweets</label>
+        </div>
+      </div>
+    </div>
+    <div class="parent">
+      <span class="heading">Number post/page</span>
+      <div>
+        <label class="numberLabel">No. of post per page:</label>
+        <input class="inputNumber"  [value]="count" (change)="calculateNumberOfPosts($event)" type="number"/>
+      </div>
+    </div>
+  </div>
+
+</div>

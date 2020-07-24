@@ -1,0 +1,12 @@
+<div class="container-fluid p-0">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-3">
+        <left-nav *ngIf="wholeData.length" [count]="count" [perPageData]="tweetsData" [parentData]="wholeData" (tweetsDataEmitter)='OnApplyFilter($event)' (searchEmitter)='OnApplySearchFilter($event)'></left-nav>
+    </div>
+    <div class="col-1"></div>
+    <div class="col-6" style="background: #e8f0f8; margin-top: 50px; border-radius: 6px; border:2px solid #c9d4dd">
+      <tweet *ngIf="tweetsData.length" [data]="tweetsData" [searchField]="searchField"></tweet>
+    </div>
+  </div>
+</div>
